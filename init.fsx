@@ -127,7 +127,7 @@ dirsWithProjects
     // project files
     pd
     |> allSubDirectories
-    |> Array.collect (fun d -> filesInDirMatching "*.?sproj" d)
+    |> Array.collect (fun d -> filesInDirMatching "*.*proj" d)
     |> Array.iter (fun f -> f.MoveTo(f.Directory.FullName @@ (f.Name.Replace(projectTemplateName, projectName))))
     // project directories
     pd
