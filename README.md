@@ -1,9 +1,10 @@
-[![Issue Stats](http://issuestats.com/github/fsprojects/ProjectScaffold/badge/issue)](http://issuestats.com/github/fsprojects/ProjectScaffold)
-[![Issue Stats](http://issuestats.com/github/fsprojects/ProjectScaffold/badge/pr)](http://issuestats.com/github/fsprojects/ProjectScaffold)
+[![Issue Stats](http://issuestats.com/github/NaseUkolyCZ/ProjectScaffoldWithApps/badge/issue)](http://issuestats.com/github/NaseUkolyCZ/ProjectScaffoldWithApps)
+[![Issue Stats](http://issuestats.com/github/NaseUkolyCZ/ProjectScaffoldWithApps/badge/pr)](http://issuestats.com/github/NaseUkolyCZ/ProjectScaffoldWithApps)
 
-# ProjectScaffold
+# ProjectScaffoldWithApps
 
-This project can be used to scaffold a prototypical .NET solution including file system layout and tooling. This includes a build process that: 
+This project is adding just a few projects to famous [ProjectScaffold](http://fsprojects.github.io/ProjectScaffold). 
+It can be used to scaffold a prototypical .NET solution including file system layout, tooling and applications. This includes a build process that: 
 
 * updates all AssemblyInfo files
 * compiles the application and runs all test projects
@@ -27,9 +28,9 @@ Documentation: http://fsprojects.github.io/ProjectScaffold
 
 Mono | .NET
 ---- | ----
-[![Mono CI Build Status](https://img.shields.io/travis/fsprojects/ProjectScaffold/master.svg)](https://travis-ci.org/fsprojects/ProjectScaffold) | [![.NET Build Status](https://img.shields.io/appveyor/ci/fsgit/ProjectScaffold/master.svg)](https://ci.appveyor.com/project/fsgit/projectscaffold)
+[![Mono CI Build Status](https://img.shields.io/travis/NaseUkolyCZ/ProjectScaffoldWithApps/master.svg)](https://travis-ci.org/NaseUkolyCZ/ProjectScaffoldWithApps) | [![.NET Build Status](https://img.shields.io/appveyor/ci/NaseUkolyCZ/ProjectScaffoldWithApps/master.svg)](https://ci.appveyor.com/project/NaseUkolyCZ/ProjectScaffoldWithApps)
 
-## Maintainer(s)
+## Maintainer(s) of [ProjectScaffold](http://fsprojects.github.io/ProjectScaffold) are
 
 - [@forki](https://github.com/forki)
 - [@pblasucci](https://github.com/pblasucci)
