@@ -23,6 +23,8 @@ Read the [Getting started tutorial](http://fsprojects.github.io/ProjectScaffold/
 
 Documentation: http://fsprojects.github.io/ProjectScaffold
 
+## Solution Structure
+![Solution Structure](https://raw.githubusercontent.com/NaseUkolyCZ/ProjectScaffoldWithApps/master/docs/FSharp.ProjectTemplate%20Structure.png)
 
 ## Build Status
 
