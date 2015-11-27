@@ -140,7 +140,7 @@ dirsWithProjects
                     d.MoveTo(d.FullName.Replace(projectTemplateName, projectName))
                     printfn " done."
                 with
-                | ex -> printfn " failed [%A]" ex
+                | ex -> () // printfn " failed [%A]" ex // just swallow the exception for now
        )
     )
 
