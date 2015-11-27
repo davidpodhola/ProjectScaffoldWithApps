@@ -39,3 +39,4 @@ Mono | .NET
 - [@sergey-tihon](https://github.com/sergey-tihon)
 
 The default maintainer account for projects under "fsprojects" is [@fsprojectsgit](https://github.com/fsprojectsgit) - F# Community Project Incubation Space (repo management)
+This project is maintained by [@davidpodhola](https://github.com/davidpodhola)
