@@ -27,18 +27,17 @@ module Tests =
     open Support
 
     [<Test>]
-    let HokusPokus () =
+    let ``is th database accessible at all`` () =
         let a = FSharp.ProjectTemplate.NMemory.Impl.Database()
         Assert.IsNotNull(a)
 
     [<Test>]
     let ``simple database crud is working`` () =
-        if not Setup.runningOnAppveyor then
-            Log.Information( "Test entered" )
-            let db = DI.Load<IHelloPersistency> ()
-            //let db = DI.Register<FSharp.ProjectTemplate.NMemory.Impl.Database, IHelloPersistency> ()
-            let p = {FirstName="John";LastName="Rambo"}
-            db.Save( p )
-            let lastSeen = db.Load( p )
-            Assert.AreEqual( true, lastSeen.IsSome )
-            Assert.LessOrEqual( DateTime.Now - lastSeen.Value, TimeSpan.FromSeconds(float 1) )
+        Log.Information( "Test entered" )
+        let db = DI.Load<IHelloPersistency> ()
+        //let db = DI.Register<FSharp.ProjectTemplate.NMemory.Impl.Database, IHelloPersistency> ()
+        let p = {FirstName="John";LastName="Rambo"}
+        db.Save( p )
+        let lastSeen = db.Load( p )
+        Assert.AreEqual( true, lastSeen.IsSome )
+        Assert.LessOrEqual( DateTime.Now - lastSeen.Value, TimeSpan.FromSeconds(float 1) )
