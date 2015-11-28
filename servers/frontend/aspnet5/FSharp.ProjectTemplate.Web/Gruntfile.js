@@ -7,6 +7,7 @@
 
 module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         copy: {
@@ -17,10 +18,21 @@ module.exports = function (grunt) {
                 ],
             },
         },
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: ['react']
+            },
+            dist: {
+                files: {
+                    'wwwroot/hello.js': 'hello.jsx'
+                }
+            }
+        }        
     });
     
     grunt.registerTask('debugbuild', [
-		'copy'
+		'copy', 'babel'
     ]);
     
 };
