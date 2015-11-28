@@ -5,15 +5,15 @@ sudo: false
 addons:
   apt:
     packages:
-	- unzip 
-	- curl
-    - libunwind8  
-	- gettext
-	- libssl-dev
-	- libcurl4-openssl-dev
-	- zlib1g 
-	- libicu-dev 
-	- uuid-dev
+      - unzip 
+      - curl
+      - libunwind8  
+      - gettext
+      - libssl-dev
+      - libcurl4-openssl-dev
+      - zlib1g 
+      - libicu-dev 
+      - uuid-dev
 
 before_install:
   - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
