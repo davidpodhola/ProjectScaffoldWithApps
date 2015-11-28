@@ -1,7 +1,5 @@
 powershell -NoProfile -ExecutionPolicy unrestricted -Command "&{iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1'))}"
 
-choco install nodejs -y
-
 call npm install -g bower
 
 call %userprofile%\.dnx\bin\dnvm install 1.0.0-rc1-final
