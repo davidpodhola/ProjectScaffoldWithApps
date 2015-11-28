@@ -179,6 +179,7 @@ let rec filesToReplace dir = seq {
   yield! Directory.GetFiles(dir, "*.xaml")
   yield! Directory.GetFiles(dir, "*.fsx")
   yield! Directory.GetFiles(dir, "paket.template")
+  yield! Directory.GetFiles(dir, "*.json")
   yield! Directory.EnumerateDirectories(dir) |> Seq.collect filesToReplace
 }
 
