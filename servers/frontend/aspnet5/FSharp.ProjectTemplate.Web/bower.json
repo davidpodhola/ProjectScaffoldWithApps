@@ -1,0 +1,6 @@
+{
+  "name": "FSharp.ProjectTemplate.Web",
+  "private": true,
+  "dependencies": {},
+  "exportsOverride": {}
+}
