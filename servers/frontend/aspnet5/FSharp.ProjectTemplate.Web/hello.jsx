@@ -9,7 +9,8 @@ var HelloBox = React.createClass({
     this.setState({lastName: event.target.value});
   },
   handleSubmit: function(event) {
-    console.log( this.state.firstName + ' ' + this.state.lastName )     
+    console.log( this.state.firstName + ' ' + this.state.lastName ) 
+    this.setState({hello: 'Hello ' + this.state.firstName + ' ' + this.state.lastName + '!' });
   },  
   componentDidUpdate: function(prevProps, prevState) {
     console.log( prevState.firstName + ' ' + prevState.lastName );
@@ -18,10 +19,10 @@ var HelloBox = React.createClass({
     return (
       <div className="helloBox">
         Ask when we saw each other for the last time.<br/>
-        First name:<input type="text" value={this.firstName} onChange={this.handleChangedFirstName} /><br/>     
-        Last name:<input type="text" value={this.lastName} onChange={this.handleChangedLastName} /><br/>  
-        {this.hello}
-        <button type="button" className="btn btn-primary btn-block" onClick={this.handleSubmit}>Submit</button>
+        First name:<input type="text" value={this.state.firstName} onChange={this.handleChangedFirstName} /><br/>     
+        Last name:<input type="text" value={this.state.lastName} onChange={this.handleChangedLastName} /><br/>  
+        <button type="button" className="btn btn-primary btn-block" onClick={this.handleSubmit}>Submit</button><br/>
+        <span><b>{this.state.hello}</b></span><br/>
       </div>
     );
   }
