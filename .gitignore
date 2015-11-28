@@ -194,3 +194,4 @@ clients/remote/Office Add-ins/FSharp.ProjectTemplate.OfficeApp.MailWeb/Scripts/O
 project.lock.json
 
 setup_done.txt
+wwwroot/
