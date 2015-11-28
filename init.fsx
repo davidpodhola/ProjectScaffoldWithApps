@@ -180,7 +180,9 @@ let rec filesToReplace dir = seq {
   yield! Directory.GetFiles(dir, "*.fsx")
   yield! Directory.GetFiles(dir, "paket.template")
   yield! Directory.GetFiles(dir, "*.json")
-  yield! Directory.GetFiles(dir, "*gitignore*")
+  yield! Directory.GetFiles(dir, "*.gitignore*")
+  yield! Directory.GetFiles(dir, "*.html")
+  yield! Directory.GetFiles(dir, "*.js")
   yield! Directory.EnumerateDirectories(dir) |> Seq.collect filesToReplace
 }
 
