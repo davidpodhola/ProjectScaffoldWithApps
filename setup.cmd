@@ -15,6 +15,4 @@ call bower install
 call %userprofile%\.dnx\runtimes\dnx-clr-win-x86.1.0.0-rc1-final\bin\dnu restore
 cd ..\..\..\..\
 
-.paket\paket update
-
 echo "Finished" > setup_done.txt
