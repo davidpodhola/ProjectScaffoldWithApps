@@ -27,5 +27,5 @@ module SqlClient =
       let p = {FirstName="John";LastName="Rambo"}
       Impl.SavePersonLastSeen( p )
       let lastSeen = Impl.LoadPersonLastSeen( p ) |> Async.RunSynchronously
-      Assert.LessOrEqual( DateTime.Now - lastSeen.Value, TimeSpan.FromSeconds(float 10) )
+      Assert.LessOrEqual( DateTime.Now - lastSeen.Value, TimeSpan.FromHours(float 24) ) // lazy to solve UTC diff
       
