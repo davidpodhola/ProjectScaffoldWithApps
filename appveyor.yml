@@ -1,7 +1,9 @@
 init:
   - git config --global core.autocrlf input
 environment:
-  - nodejs_version: "5"
+  matrix:
+  # node.js
+    - nodejs_version: "5"
 os: Visual Studio 2015
 before_build:
   - cmd: before_build.cmd
