@@ -1,6 +1,6 @@
 source https://nuget.org/api/v2
 
-nuget Autofac.Configuration >= 4.0.0-beta8-262 prerelease 
+nuget Autofac.Configuration 4.0.0-beta8-262
 nuget Destructurama.FSharp
 nuget EventStore.Client.FSharp
 nuget Expression.Blend.Sdk
