@@ -30,7 +30,7 @@ Documentation: http://fsprojects.github.io/ProjectScaffold
 
 Mono | .NET
 ---- | ----
-[![Mono CI Build Status](https://img.shields.io/travis/NaseUkolyCZ/ProjectScaffoldWithApps/master.svg)](https://travis-ci.org/NaseUkolyCZ/ProjectScaffoldWithApps) | [![.NET Build Status](https://img.shields.io/appveyor/ci/NaseUkolyCZ/ProjectScaffoldWithApps/master.svg)](https://ci.appveyor.com/project/NaseUkolyCZ/ProjectScaffoldWithApps)
+[![Mono CI Build Status](https://img.shields.io/travis/davidpodhola/ProjectScaffoldWithApps/master.svg)](https://travis-ci.org/davidpodhola/ProjectScaffoldWithApps) | [![.NET Build Status](https://img.shields.io/appveyor/ci/davidpodhola/ProjectScaffoldWithApps/master.svg)](https://ci.appveyor.com/project/davidpodhola/ProjectScaffoldWithApps)
 
 ## Maintainer(s) of [ProjectScaffold](http://fsprojects.github.io/ProjectScaffold) are
 
