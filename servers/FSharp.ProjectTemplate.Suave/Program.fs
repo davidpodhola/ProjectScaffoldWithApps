@@ -95,8 +95,7 @@ module Program =
                     printfn "----------------------------------"
                     return! 
                         ctx |> (
-                            setHeader  "Access-Control-Allow-Origin" "*" 
-                            >>= setHeader "Access-Control-Allow-Headers" "content-type"
+                            setCORSHeaders
                             >>=  OK (result.ToString()) 
                         )
         | None   -> return! BAD_REQUEST "actor was not found, or message has invalid format" ctx  
@@ -107,8 +106,7 @@ module Program =
                     OPTIONS >>= 
                         fun context -> 
                             context |> ( 
-                                setHeader  "Access-Control-Allow-Origin" "*" 
-                                >>= setHeader "Access-Control-Allow-Headers" "content-type"
+                                setCORSHeaders
                                 >>=  OK "CORS approved")
             ]
 
