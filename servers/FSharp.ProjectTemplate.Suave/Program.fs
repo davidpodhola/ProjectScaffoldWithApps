@@ -8,6 +8,7 @@ module Program =
     open Suave.Web
     open Suave.Http
     open Suave.Http.Successful
+    open Suave.Http.Writers
     open Suave.Http.RequestErrors
     open Suave.Http.Applicatives
     open Suave.Types
@@ -70,25 +71,54 @@ module Program =
 
 
       let hasContentType (ctx:HttpContext) = async {
+        printfn "ctx.request.header 'content-type' %A" (ctx.request.header "content-type")
+
         match ctx.request.header "content-type" with
-        | Choice1Of2 v when v = ContentType.Orleankka -> 
+        | Choice1Of2 v when v.Contains( ContentType.Orleankka ) -> 
                return Some ctx
         | _ -> return None
       }    
+
+      let setCORSHeaders = 
+        setHeader  "Access-Control-Allow-Origin" "*" 
+        >>= setHeader "Access-Control-Allow-Headers" "content-type"
 
       // sends msg to actor 
       let sendMsg actorPath (ctx:HttpContext) = async {    
     
         let msgBody = ctx.request.rawForm |> UTF8.toString
+        printfn "msgBody %A" msgBody
         
         match router.Dispatch(actorPath, msgBody) with
         | Some t -> let! result = Async.AwaitTask t
-                    return! OK (result.ToString()) ctx
+                    printfn "result %A" (result.ToString())
+                    printfn "----------------------------------"
+                    return! 
+                        ctx |> (
+                            setHeader  "Access-Control-Allow-Origin" "*" 
+                            >>= setHeader "Access-Control-Allow-Headers" "content-type"
+                            >>=  OK (result.ToString()) 
+                        )
         | None   -> return! BAD_REQUEST "actor was not found, or message has invalid format" ctx  
       }  
 
+        let allow_cors : WebPart =
+                choose [
+                    OPTIONS >>= 
+                        fun context -> 
+                            context |> ( 
+                                setHeader  "Access-Control-Allow-Origin" "*" 
+                                >>= setHeader "Access-Control-Allow-Headers" "content-type"
+                                >>=  OK "CORS approved")
+            ]
+
       // configure Suave routing
-      let app = POST >>= hasContentType >>= pathScan "/api/%s" (fun path -> request (fun req ctx -> sendMsg path ctx))  
+      let app = 
+        choose [
+            allow_cors
+            POST >>= hasContentType >>= pathScan "/api/%s" (fun path -> request (fun req ctx -> 
+                sendMsg path ctx))  
+        ]
 
       printfn "Finished booting cluster...\n"
 
