@@ -14,6 +14,23 @@ var HelloBox = React.createClass({
   },  
   componentDidUpdate: function(prevProps, prevState) {
     console.log( prevState.firstName + ' ' + prevState.lastName );
+    
+var newName = 'John Smith',
+    xhr = new XMLHttpRequest();
+
+    xhr.open('POST',
+    encodeURI('http://localhost:8083/api/FSharp.ProjectTemplate.Suave.Program+GreeterSQL/http_test/Greet'));
+    xhr.setRequestHeader('Content-Type', 'orleankka/vnd.actor+json');
+    xhr.onload = function() {
+        if (xhr.status === 200 && xhr.responseText !== newName) {
+            var hello =  xhr.responseText;
+            this.setState({hello: hello});     
+        }
+        else if (xhr.status !== 200) {
+            alert('Request failed.  Returned status of ' + xhr.status);
+        }
+    };
+    xhr.send(encodeURI('{ "FirstName" : "John", "LastName" : "Rambo"  }'));
   },
   render: function() {
     return (
