@@ -59,4 +59,4 @@ module Site =
     open WebSharper.Suave
     open Suave.Web
 
-    do startWebServer defaultConfig (WebSharperAdapter.ToWebPart Main)
+    do startWebServer { defaultConfig with bindings = [ Suave.Types.HttpBinding.mk' Suave.Types.HTTP "127.0.0.1" 8080 ]  } (WebSharperAdapter.ToWebPart Main)
