@@ -18,15 +18,18 @@ nuget Microsoft.Net.Compilers
 nuget Microsoft.Office.js
 nuget Microsoft.Orleans.Templates.Grains
 nuget Microsoft.Orleans.Templates.Interfaces
+nuget Microsoft.Owin 3.0.1
 nuget ModernUI.WPF
+nuget Mono.Cecil 0.9.6.1
 nuget Newtonsoft.Json
 nuget NMemory
 nuget NUnit ~> 2
 nuget NUnit.Runners ~> 2
 nuget FAKE
 nuget Orleankka.Fsharp
+nuget Owin 1.0
 nuget SourceLink.Fake
-nuget Suave
+nuget Suave 0.33.0-libuv
 nuget System.Management.Automation
 nuget System.IO.FileSystem >= 4.0.1-beta-23409 prerelease
 nuget System.Runtime >= 4.0.21-beta-23516 prerelease
@@ -34,5 +37,9 @@ nuget System.Diagnostics.Debug >= 4.0.11-beta-23409 prerelease
 nuget System.Threading >= 4.0.11-beta-23409 prerelease
 nuget System.Threading.Tasks >= 4.0.11-beta-23409 prerelease
 nuget System.Runtime.Extensions >= 4.0.11-beta-23409 prerelease
+nuget WebSharper 3.5.14.215
+nuget WebSharper.Owin 3.5.5.112
+nuget WebSharper.Suave 3.5.6.19
+nuget WebSharper.UI.Next 3.5.17.191
 
 github fsharp/FAKE modules/Octokit/Octokit.fsx
