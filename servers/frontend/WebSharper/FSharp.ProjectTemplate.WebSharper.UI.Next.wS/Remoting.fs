@@ -1,12 +1,12 @@
 namespace FSharp.ProjectTemplate.WebSharper.UI.Next.wS
 
 open WebSharper
+open FSharp.ProjectTemplate.Backend
 
 module Server =
 
     [<Rpc>]
-    let DoSomething firstName lastName =
-        let R (s: string) = System.String(Array.rev(s.ToCharArray()))
+    let DoSomething firstName lastName =        
         async {
-            return R (firstName + " " + lastName)
+            return Client.hello firstName lastName
         }

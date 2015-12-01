@@ -153,6 +153,13 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\backend\FSharp.ProjectTemplate.Backend.Client\FSharp.ProjectTemplate.Backend.Client.fsproj">
+      <Name>FSharp.ProjectTemplate.Backend.Client</Name>
+      <Project>{6b784748-2447-4038-b7c2-23ea130050bd}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <!-- F# targets -->
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '11.0'">
