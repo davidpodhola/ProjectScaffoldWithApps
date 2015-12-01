@@ -10,15 +10,18 @@ open WebSharper.UI.Next.Html
 module Client =
 
     let Main () =
-        let rvInput = Var.Create ""
-        let submit = Submitter.CreateOption rvInput.View
+        let rvFirstName = Var.Create "First name"
+        let rvLastName = Var.Create "Last name"
+        let viewFullName = View.Map2 ( fun f l -> f + " " + l ) rvFirstName.View rvLastName.View
+        let submit = Submitter.CreateOption viewFullName
         let vReversed =
             submit.View.MapAsync(function
                 | None -> async { return "" }
                 | Some input -> Server.DoSomething input
             )
         div [
-            Doc.Input [] rvInput
+            Doc.Input [] rvFirstName
+            Doc.Input [] rvLastName
             Doc.Button "Send" [] submit.Trigger
             hr []
             h4Attr [attr.``class`` "text-muted"] [text "The server responded:"]
