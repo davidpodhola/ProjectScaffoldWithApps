@@ -1,13 +1,12 @@
 namespace FSharp.ProjectTemplate.WebSharper.UI.Next.wS
 
 open WebSharper
-open FSharp.ProjectTemplate.Domain
 
 module Server =
 
     [<Rpc>]
-    let DoSomething person =
+    let DoSomething firstName lastName =
         let R (s: string) = System.String(Array.rev(s.ToCharArray()))
         async {
-            return R (person.FirstName + " " + person.LastName)
+            return R (firstName + " " + lastName)
         }
