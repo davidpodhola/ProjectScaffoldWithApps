@@ -49,7 +49,7 @@
     <Compile Include="JsonSerializer.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\FSharp.ProjectTemplate.Fx\FSharp.ProjectTemplate.Fx.fsproj">
+    <ProjectReference Include="..\..\..\src\FSharp.ProjectTemplate.Fx\FSharp.ProjectTemplate.Fx.fsproj">
       <Name>FSharp.ProjectTemplate.Fx</Name>
       <Project>{20eaba0d-bac0-4e2c-abcd-e0cd459669cf}</Project>
       <Private>True</Private>
@@ -82,7 +82,7 @@
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6')">
       <ItemGroup>
         <Reference Include="Orleans">
-          <HintPath>..\..\packages\Microsoft.Orleans.Core\lib\net45\Orleans.dll</HintPath>
+          <HintPath>..\..\..\packages\Microsoft.Orleans.Core\lib\net45\Orleans.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -93,7 +93,7 @@
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6')">
       <ItemGroup>
         <Reference Include="OrleansProviders">
-          <HintPath>..\..\packages\Microsoft.Orleans.OrleansProviders\lib\net45\OrleansProviders.dll</HintPath>
+          <HintPath>..\..\..\packages\Microsoft.Orleans.OrleansProviders\lib\net45\OrleansProviders.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -104,7 +104,7 @@
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6')">
       <ItemGroup>
         <Reference Include="OrleansRuntime">
-          <HintPath>..\..\packages\Microsoft.Orleans.OrleansRuntime\lib\net45\OrleansRuntime.dll</HintPath>
+          <HintPath>..\..\..\packages\Microsoft.Orleans.OrleansRuntime\lib\net45\OrleansRuntime.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -115,7 +115,7 @@
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6')">
       <ItemGroup>
         <Reference Include="Newtonsoft.Json">
-          <HintPath>..\..\packages\Newtonsoft.Json\lib\net45\Newtonsoft.Json.dll</HintPath>
+          <HintPath>..\..\..\packages\Newtonsoft.Json\lib\net45\Newtonsoft.Json.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -126,22 +126,22 @@
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6')">
       <ItemGroup>
         <Reference Include="Orleankka.Core">
-          <HintPath>..\..\packages\Orleankka\lib\net45\Orleankka.Core.dll</HintPath>
+          <HintPath>..\..\..\packages\Orleankka\lib\net45\Orleankka.Core.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
         <Reference Include="Orleankka.Meta">
-          <HintPath>..\..\packages\Orleankka\lib\net45\Orleankka.Meta.dll</HintPath>
+          <HintPath>..\..\..\packages\Orleankka\lib\net45\Orleankka.Meta.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
         <Reference Include="Orleankka">
-          <HintPath>..\..\packages\Orleankka\lib\net45\Orleankka.dll</HintPath>
+          <HintPath>..\..\..\packages\Orleankka\lib\net45\Orleankka.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
         <Reference Include="OrleansManager">
-          <HintPath>..\..\packages\Orleankka\lib\net45\OrleansManager.dll</HintPath>
+          <HintPath>..\..\..\packages\Orleankka\lib\net45\OrleansManager.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -152,7 +152,7 @@
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6')">
       <ItemGroup>
         <Reference Include="Orleankka.FSharp">
-          <HintPath>..\..\packages\Orleankka.Fsharp\lib\net45\Orleankka.FSharp.dll</HintPath>
+          <HintPath>..\..\..\packages\Orleankka.Fsharp\lib\net45\Orleankka.FSharp.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>

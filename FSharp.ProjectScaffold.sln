@@ -47,9 +47,9 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.ProjectTemplate.Powe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "servers", "servers", "{DFF025AE-050F-4A59-A698-51264E64CA70}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.ProjectTemplate.Suave", "servers\FSharp.ProjectTemplate.Suave\FSharp.ProjectTemplate.Suave.fsproj", "{6D0625C8-6D48-4320-89B0-CF2DF1A6096E}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.ProjectTemplate.Suave", "servers\backend\FSharp.ProjectTemplate.Suave\FSharp.ProjectTemplate.Suave.fsproj", "{6D0625C8-6D48-4320-89B0-CF2DF1A6096E}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.ProjectTemplate.Actors", "servers\FSharp.ProjectTemplate.Actors\FSharp.ProjectTemplate.Actors.fsproj", "{D55032AA-AED3-4DC6-B905-F7A51B979C04}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.ProjectTemplate.Actors", "servers\backend\FSharp.ProjectTemplate.Actors\FSharp.ProjectTemplate.Actors.fsproj", "{D55032AA-AED3-4DC6-B905-F7A51B979C04}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.ProjectTemplate.Fx", "src\FSharp.ProjectTemplate.Fx\FSharp.ProjectTemplate.Fx.fsproj", "{20EABA0D-BAC0-4E2C-ABCD-E0CD459669CF}"
 EndProject
