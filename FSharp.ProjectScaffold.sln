@@ -104,7 +104,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bdd", "bdd", "{1FA67B72-66D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bdd ui", "bdd ui", "{169E2C0F-36CF-44DF-BE83-3CB3C3D7071B}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.ProjectTemplate.BDDTests", "tests\FSharp.ProjectTemplate.BDDTests\FSharp.ProjectTemplate.BDDTests.fsproj", "{2D42A751-9735-4C5B-8354-584BFC49199D}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.ProjectTemplate.BDD.Tests", "tests\FSharp.ProjectTemplate.BDDTests\FSharp.ProjectTemplate.BDD.Tests.fsproj", "{2D42A751-9735-4C5B-8354-584BFC49199D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
