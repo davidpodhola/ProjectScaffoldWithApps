@@ -13,6 +13,7 @@ It can be used to scaffold a prototypical .NET solution including file system la
 * generates [documentation based on Markdown files](http://fsprojects.github.io/ProjectScaffold/writing-docs.html)
 * generates [NuGet](http://www.nuget.org) packages
 * and allows a simple [one step release process](http://fsprojects.github.io/ProjectScaffold/release-process.html).
+* have application prototypes
 
 In order to start the scaffolding process run 
 
