@@ -57,17 +57,13 @@
   </Target>
   -->
   <ItemGroup>
-    <Content Include="StockFeature.txt">
-      <Paket>True</Paket>
-    </Content>
-    <Compile Include="StockStepDefinitions.fs">
-      <Paket>True</Paket>
-    </Compile>
     <Compile Include="Fixtures.fs">
       <Paket>True</Paket>
     </Compile>
     <None Include="Script.fsx" />
     <Content Include="App.config" />
+    <Compile Include="GreetingStepDefinitions.fs" />
+    <Content Include="GreetingFeature.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
