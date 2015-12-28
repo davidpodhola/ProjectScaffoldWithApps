@@ -9,7 +9,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>FSharp.ProjectTemplate.OfficeApp.MailWeb.App</RootNamespace>
     <AssemblyName>FSharp.ProjectTemplate.OfficeApp.MailWeb.App</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <Name>FSharp.ProjectTemplate.OfficeApp.MailWeb.App</Name>

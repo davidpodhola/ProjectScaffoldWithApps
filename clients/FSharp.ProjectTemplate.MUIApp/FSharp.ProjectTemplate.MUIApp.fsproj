@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>FSharp.ProjectTemplate.MUIApp</RootNamespace>
     <AssemblyName>FSharp.ProjectTemplate.MUIApp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <Name>FSharp.ProjectTemplate.MUIApp</Name>
