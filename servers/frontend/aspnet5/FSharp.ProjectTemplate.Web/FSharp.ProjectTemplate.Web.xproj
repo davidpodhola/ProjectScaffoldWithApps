@@ -16,4 +16,5 @@
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="Exists('$(VSToolsPath)\DNX\Microsoft.DNX.targets')" />
+  <Target Name="Rebuild" Condition=" '$(OS)' == 'Unix' " />
 </Project>
