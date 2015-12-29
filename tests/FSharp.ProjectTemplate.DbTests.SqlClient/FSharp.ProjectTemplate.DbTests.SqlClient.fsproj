@@ -62,7 +62,7 @@
   <ItemGroup>
     <Compile Include="SqlClientTests.fs" />
     <None Include="Script.fsx" />
-    <None Include="app.config_" />
+    <Content Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
