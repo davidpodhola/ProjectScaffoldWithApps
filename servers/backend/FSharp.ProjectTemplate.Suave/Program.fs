@@ -26,8 +26,6 @@ module Program =
     open Serilog
     open Orleans.Serialization
 
-    open JsonSerializer
-
     open FSharp.ProjectTemplate.Domain
 
     open Support
