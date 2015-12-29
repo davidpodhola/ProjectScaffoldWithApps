@@ -54,26 +54,6 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Choose>
-    <When Condition="Exists('$(MSBuildExtensionsPath32)\..\Reference Assemblies\Microsoft\FSharp\.NETCore\$(TargetFSharpCoreVersion)\FSharp.Core.dll')">
-      <ItemGroup>
-        <Reference Include="FSharp.Core">
-          <Name>FSharp.Core</Name>
-          <AssemblyName>FSharp.Core.dll</AssemblyName>
-          <HintPath>$(MSBuildExtensionsPath32)\..\Reference Assemblies\Microsoft\FSharp\.NETCore\$(TargetFSharpCoreVersion)\FSharp.Core.dll</HintPath>
-        </Reference>
-      </ItemGroup>
-    </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="FSharp.Core">
-          <Name>FSharp.Core</Name>
-          <AssemblyName>FSharp.Core.dll</AssemblyName>
-          <HintPath>..\..\packages\FSharp.Core\lib\portable-net45+netcore45+wpa81+wp8\FSharp.Core.dll</HintPath>
-        </Reference>
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -95,8 +75,11 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-    <ProjectReference Include="..\..\src\FSharp.ProjectTemplate\FSharp.ProjectTemplate.fsproj">
-      <Name>FSharp.ProjectTemplate</Name>
+    <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <ProjectReference Include="..\..\src\FSharp.ProjectTemplate.Fx\FSharp.ProjectTemplate.Fx.fsproj">
+      <Name>FSharp.ProjectTemplate.Fx</Name>
       <Project>{7e90d6ce-a10b-4858-a5bc-41df7250cbca}</Project>
       <Private>True</Private>
     </ProjectReference>
