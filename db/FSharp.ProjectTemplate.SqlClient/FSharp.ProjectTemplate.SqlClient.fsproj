@@ -61,7 +61,7 @@
     <Compile Include="SqlClientLibrary.fs" />
     <None Include="SavePersonLastSeen.sql" />
     <None Include="Script.fsx" />
-    <Content Include="App.config" />
+    <None Include="app.config_" />
     <None Include="GetPersonLastSeen.sql" />
     <None Include="CreateSchema.sql" />
   </ItemGroup>
