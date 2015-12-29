@@ -2,6 +2,7 @@
 
 open FsXaml
 
+#if !MONO
 type MainView = XAML<"MainView.xaml", true>
 
 // This is to demonstrate being able to add in "code behind"
@@ -21,3 +22,4 @@ type MainViewController() =
         |> this.DisposeOnUnload
         
 
+#endif

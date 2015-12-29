@@ -2,5 +2,6 @@
 
 open FsXaml
 
+#if !MONO
 type MainWindow = XAML<"MainWindow.xaml">
-
+#endif
