@@ -3,6 +3,7 @@
 open NUnit.Framework
 open Serilog
 open System
+open System.Threading
 
 module Setup=
     let runningOnAppveyor =
@@ -38,6 +39,7 @@ module Tests =
         //let db = DI.Register<FSharp.ProjectTemplate.NMemory.Impl.Database, IHelloPersistency> ()
         let p = {FirstName="John";LastName="Rambo"}
         db.Save( p )
+        Thread.Sleep(500) // allow db to save and return the latest data (our Ubuntu build server issue)
         let lastSeen = db.Load( p )
         Assert.AreEqual( true, lastSeen.IsSome )
         Assert.LessOrEqual( DateTime.Now - lastSeen.Value, TimeSpan.FromSeconds(float 1) )
