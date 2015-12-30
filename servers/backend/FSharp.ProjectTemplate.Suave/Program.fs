@@ -1,5 +1,7 @@
 ﻿namespace FSharp.ProjectTemplate.Suave
 
+#if !MONO
+
 module Program =
 
     open System
@@ -120,3 +122,5 @@ module Program =
 
       startWebServer defaultConfig app
       0 
+
+#endif
