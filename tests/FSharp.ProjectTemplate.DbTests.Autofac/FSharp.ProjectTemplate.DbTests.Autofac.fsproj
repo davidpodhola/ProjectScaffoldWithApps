@@ -55,7 +55,8 @@
   </Target>
   -->
   <Target Name="AfterBuild">
-    <Exec Command="copy /y &quot;$(ProjectDir)App.config&quot; &quot;$(TargetDir)\$(TargetName).dll.config&quot;" />
+    <Exec Command="copy /y &quot;$(ProjectDir)App.config&quot; &quot;$(TargetDir)\$(TargetName).dll.config&quot;" Condition=" '$(OS)' != 'Unix' " />
+    <Exec Command="cp &quot;$(ProjectDir)App.config&quot; &quot;$(TargetDir)$(TargetName).dll.config&quot;" Condition=" '$(OS)' == 'Unix' "  />
   </Target>
   <ItemGroup>
     <None Include="Script.fsx" />
