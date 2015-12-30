@@ -58,12 +58,12 @@
   -->
   <ItemGroup>
     <Compile Include="GreetingFixtures.fs">
-      <Paket>True</Paket>
     </Compile>
     <None Include="Script.fsx" />
     <Content Include="App.config" />
     <Compile Include="GreetingStepDefinitions.fs" />
     <Content Include="GreetingFeature.txt" />
+    <None Include="paket.references" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
