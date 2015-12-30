@@ -4,7 +4,9 @@ open System
 open System.Windows
 open System.Windows.Input
 
+#if !MONO
 open FsXaml
+#endif
 
 open FSharp.ViewModule
 open FSharp.ViewModule.Validation

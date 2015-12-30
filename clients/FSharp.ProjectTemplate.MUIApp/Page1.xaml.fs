@@ -1,7 +1,7 @@
 ﻿namespace FSharp.ProjectTemplate.MUIApp.Views
 
+#if !MONO
 open FsXaml
 
-#if !MONO
 type Page1 = XAML<"Page1.xaml">
 #endif
