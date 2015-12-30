@@ -57,7 +57,7 @@
   </Target>
   -->
   <ItemGroup>
-    <Compile Include="Fixtures.fs">
+    <Compile Include="GreetingFixtures.fs">
       <Paket>True</Paket>
     </Compile>
     <None Include="Script.fsx" />
