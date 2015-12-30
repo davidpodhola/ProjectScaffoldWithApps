@@ -387,4 +387,6 @@
   -->
   <Target Name="Build" Condition="($(DefineConstants.Contains('MONO')))">
   </Target>
+  <Target Name="Rebuild" Condition="($(DefineConstants.Contains('MONO')))">
+  </Target>
 </Project>
