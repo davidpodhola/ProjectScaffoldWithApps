@@ -6,7 +6,7 @@ open System.Windows.Input
 
 #if !MONO
 open FsXaml
-#endif
+
 
 open FSharp.ViewModule
 open FSharp.ViewModule.Validation
@@ -60,3 +60,4 @@ type MainViewModel() as self =
                 yield PropertyValidation("FullName", err)
                 yield EntityValidation(err)
         }
+#endif
