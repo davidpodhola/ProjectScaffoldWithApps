@@ -9,20 +9,24 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>FSharp.ProjectTemplate.Suave</RootNamespace>
     <AssemblyName>FSharp.ProjectTemplate.Suave</AssemblyName>
-	<Choose>
-		<When Condition="!($(DefineConstants.Contains('MONO')))">
-			<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-		</When>
-	</Choose>
-	<Choose>
-		<When Condition="($(DefineConstants.Contains('MONO')))">
-			<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-		</When>
-	</Choose>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <Name>FSharp.ProjectTemplate.Suave</Name>
   </PropertyGroup>
+<Choose>
+	<When Condition="!($(DefineConstants.Contains('MONO')))">
+  <PropertyGroup>
+		<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+	</When>
+</Choose>
+<Choose>
+	<When Condition="($(DefineConstants.Contains('MONO')))">
+  <PropertyGroup>
+		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+	</When>
+</Choose>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
