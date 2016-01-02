@@ -29,7 +29,7 @@ nuget NMemory
 nuget NUnit ~> 2
 nuget NUnit.Runners ~> 2
 nuget FAKE
-nuget Microsoft.Orleans.Core v1.1.0-beta2
+nuget Microsoft.Orleans.Core v1.0.10
 nuget Orleankka.Fsharp
 nuget Owin 1.0
 nuget SourceLink.Fake
